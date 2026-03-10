@@ -1,0 +1,1 @@
+aarjithk ALL=(ALL) NOPASSWD: /usr/bin/cp * /usr/share/sddm/themes/simple_sddm_2/Backgrounds/default
