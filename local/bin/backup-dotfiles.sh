@@ -84,7 +84,9 @@ sudo chown "$USER:$USER" "$REPO_DIR/sudoers/sddm-sync" 2>/dev/null || true
 # ── Ryujinx saves ─────────────────────────────────────────────────────────────
 info "Copying Ryujinx saves..."
 mkdir -p "$REPO_DIR/ryujinx"
-cp -r "$HOME/.config/Ryujinx/." "$REPO_DIR/ryujinx/" 2>/dev/null && ok "Copied Ryujinx data" || info "No Ryujinx data found"
+cp -r "$HOME/.config/Ryujinx/bis" "$REPO_DIR/ryujinx/"
+    cp "$HOME/.config/Ryujinx/Config.json" "$REPO_DIR/ryujinx/"
+    cp -r "$HOME/.config/Ryujinx/profiles" "$REPO_DIR/ryujinx/" 2>/dev/null && ok "Copied Ryujinx data" || info "No Ryujinx data found"
 
 # ── Shell configs ──────────────────────────────────────────────────────────────
 info "Copying shell configs..."
