@@ -120,7 +120,7 @@
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
-                    "maxWidth": 145,
+                    "maxWidth": 700,
                     "scrollingMode": "hover",
                     "showIcon": true,
                     "textColor": "none",
