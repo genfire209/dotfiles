@@ -32,6 +32,11 @@ step "Updating system..."
 sudo pacman -Syu --noconfirm
 ok "System updated"
 
+# ── Install openssh early ──────────────────────────────────────────────────────
+step "Installing openssh..."
+sudo pacman -S --needed --noconfirm openssh
+ok "openssh installed"
+
 # ── Install yay ───────────────────────────────────────────────────────────────
 step "Installing yay AUR helper..."
 if ! command -v yay &>/dev/null; then
@@ -179,6 +184,14 @@ step "Restoring shell configs..."
 for f in .zshrc .bashrc .zprofile .profile .zshenv; do
     [ -f "$REPO_DIR/$f" ] && cp "$REPO_DIR/$f" "$HOME/$f" && ok "Restored ~/$f"
 done
+
+# ── Restore Ryujinx saves ──────────────────────────────────────────────────────
+step "Restoring Ryujinx saves..."
+mkdir -p "$HOME/.config/Ryujinx"
+if [ -d "$REPO_DIR/ryujinx" ] && [ "$(ls -A $REPO_DIR/ryujinx 2>/dev/null)" ]; then
+    cp -r "$REPO_DIR/ryujinx/." "$HOME/.config/Ryujinx/"
+    ok "Ryujinx saves restored"
+fi
 
 # ── Enable services ────────────────────────────────────────────────────────────
 step "Enabling services..."
