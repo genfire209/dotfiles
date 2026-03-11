@@ -32,11 +32,6 @@ step "Updating system..."
 sudo pacman -Syu --noconfirm
 ok "System updated"
 
-# ── Install openssh early ──────────────────────────────────────────────────────
-step "Installing openssh..."
-sudo pacman -S --needed --noconfirm openssh
-ok "openssh installed"
-
 # ── Install yay ───────────────────────────────────────────────────────────────
 step "Installing yay AUR helper..."
 if ! command -v yay &>/dev/null; then
@@ -111,33 +106,10 @@ info "Installing AUR packages..."
 yay -S --needed --noconfirm "${AUR_PKGS[@]}" 2>/dev/null
 ok "AUR packages installed"
 
-# ── Set up SSH key for GitHub ──────────────────────────────────────────────────
-step "Setting up SSH key for GitHub..."
-if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
-    ssh-keygen -t ed25519 -C "genfire2009@gmail.com" -f "$HOME/.ssh/id_ed25519" -N ""
-    echo ""
-    echo -e "${YELLOW}╔══════════════════════════════════════════════════════╗${RESET}"
-    echo -e "${YELLOW}║  Add this SSH key to GitHub before continuing:       ║${RESET}"
-    echo -e "${YELLOW}║  https://github.com/settings/keys                    ║${RESET}"
-    echo -e "${YELLOW}╚══════════════════════════════════════════════════════╝${RESET}"
-    echo ""
-    cat "$HOME/.ssh/id_ed25519.pub"
-    echo ""
-    read -p "Press Enter once you've added the key to GitHub..."
-else
-    ok "SSH key already exists"
-fi
-
-# Test GitHub connection
-ssh -T git@github.com 2>&1 | grep -q "successfully authenticated" && ok "GitHub SSH OK" || {
-    err "GitHub SSH not working. Make sure you added the key."
-    exit 1
-}
-
 # ── Clone dotfiles ─────────────────────────────────────────────────────────────
 step "Cloning dotfiles from GitHub..."
 if [ ! -d "$REPO_DIR/.git" ]; then
-    git clone git@github.com:$GITHUB_USER/$REPO_NAME.git "$REPO_DIR"
+    git clone https://github.com/$GITHUB_USER/$REPO_NAME.git "$REPO_DIR"
     ok "Dotfiles cloned"
 else
     cd "$REPO_DIR" && git pull
