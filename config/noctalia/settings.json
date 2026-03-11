@@ -99,15 +99,6 @@
             ],
             "left": [
                 {
-                    "colorizeSystemIcon": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "rocket",
-                    "iconColor": "none",
-                    "id": "Launcher",
-                    "useDistroLogo": false
-                },
-                {
                     "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "hh:mm AP ddd, MMM dd",
@@ -194,6 +185,12 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "VPN",
+                    "textColor": "none"
                 }
             ]
         }

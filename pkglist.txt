@@ -138,6 +138,7 @@ vim
 virt-manager
 virt-viewer
 vulkan-radeon
+wev
 wget
 wireplumber
 wireshark-cli
