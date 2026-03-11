@@ -5,7 +5,7 @@
       "openai_compatible": "Chat-GPT"
     },
     "apiKeys": {
-      "google": "AIzaSyDa0wDJVCq9_MEhirdw8ZM_bWi_5T0-x-M"
+      "google": "AIzaSyD6-z-epIr4Y98i1-CpMhbUYUjJW7-aDng"
     },
     "temperature": 0.7,
     "systemPrompt": "You are a helpful assistant integrated into a Linux desktop shell. Be concise and helpful.",
