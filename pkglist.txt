@@ -134,6 +134,7 @@ umockdev
 unrar
 unzip
 upower
+vesktop
 vim
 virt-manager
 virt-viewer

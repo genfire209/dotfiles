@@ -185,12 +185,6 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
-                },
-                {
-                    "displayMode": "onhover",
-                    "iconColor": "none",
-                    "id": "VPN",
-                    "textColor": "none"
                 }
             ]
         }
@@ -604,6 +598,10 @@
             {
                 "enabled": true,
                 "id": "kitty"
+            },
+            {
+                "enabled": true,
+                "id": "discord"
             }
         ],
         "enableUserTheming": false
