@@ -77,6 +77,9 @@ PACMAN_PKGS=(
 )
 
 sudo pacman -S --needed --noconfirm "${PACMAN_PKGS[@]}" 2>/dev/null
+
+# Install these separately to make sure they don't get skipped
+sudo pacman -S --needed --noconfirm sddm libvirt tlp qemu-full virt-manager virt-viewer hyprland
 ok "Pacman packages installed"
 
 # AUR packages
@@ -140,6 +143,7 @@ fi
 
 # ── Restore SDDM theme ─────────────────────────────────────────────────────────
 step "Restoring SDDM theme..."
+sudo mkdir -p /usr/share/sddm/themes/
 sudo cp -r "$REPO_DIR/sddm/themes/simple_sddm_2" /usr/share/sddm/themes/
 sudo cp "$REPO_DIR/sddm/sddm.conf" /etc/sddm.conf
 sudo chmod 666 /usr/share/sddm/themes/simple_sddm_2/Backgrounds/default
