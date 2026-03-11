@@ -109,6 +109,11 @@ info "Installing AUR packages..."
 yay -S --needed --noconfirm "${AUR_PKGS[@]}" 2>/dev/null
 ok "AUR packages installed"
 
+# Install noctalia explicitly to make sure it's installed
+step "Installing Noctalia..."
+yay -S --needed --noconfirm noctalia-qs noctalia-shell
+ok "Noctalia installed"
+
 # ── Clone dotfiles ─────────────────────────────────────────────────────────────
 step "Cloning dotfiles from GitHub..."
 if [ ! -d "$REPO_DIR/.git" ]; then
