@@ -1,11 +1,11 @@
 #!/bin/bash
 # Full bootstrap script for aarjithk
 # Run this on a fresh Arch base install (no DE needed)
-# It will install everything and restore your dotfiles
 
 GITHUB_USER="genfire209"
 REPO_NAME="dotfiles"
 REPO_DIR="$HOME/.dotfiles"
+FAILED_PKGS=()
 
 GREEN="\e[32m"; YELLOW="\e[33m"; RED="\e[31m"; CYAN="\e[36m"; RESET="\e[0m"
 ok()   { echo -e "${GREEN}[OK]${RESET} $1"; }
@@ -45,10 +45,30 @@ else
     ok "yay already installed"
 fi
 
-# ── Install all packages ───────────────────────────────────────────────────────
-step "Installing packages (this will take a while)..."
+# ── Helper to install packages one by one and track failures ──────────────────
+install_pacman_pkg() {
+    local pkg="$1"
+    if ! sudo pacman -S --needed --noconfirm "$pkg" &>/dev/null; then
+        err "Failed to install: $pkg"
+        FAILED_PKGS+=("$pkg")
+    else
+        ok "Installed: $pkg"
+    fi
+}
 
-# Pacman packages (filter out AUR-only ones)
+install_aur_pkg() {
+    local pkg="$1"
+    if ! yay -S --needed --noconfirm "$pkg"; then
+        err "Failed to install AUR: $pkg"
+        FAILED_PKGS+=("$pkg (AUR)")
+    else
+        ok "Installed AUR: $pkg"
+    fi
+}
+
+# ── Install pacman packages ────────────────────────────────────────────────────
+step "Installing pacman packages (this will take a while)..."
+
 PACMAN_PKGS=(
     adobe-source-code-pro-fonts amd-ucode base base-devel bc
     blueman bluez bluez-utils brightnessctl btop cava cliphist
@@ -56,36 +76,34 @@ PACMAN_PKGS=(
     ffmpegthumbnailer firefox flatpak fzf gdb ghostscript git
     gnome-system-monitor go grim grub gst-plugin-pipewire
     gtk-engine-murrine gvfs gvfs-mtp hyprland imagemagick
-    intel-compute-runtime intel-graphics-compiler inxi iptables-nft
-    jdk-openjdk jq keyd kitty kvantum less libpulse libspng
-    libvirt linux linux-firmware loupe lsd ltrace mercurial micro
-    mpv mpv-mpris nano neovim network-manager-applet networkmanager
-    nodejs noto-fonts noto-fonts-emoji npm ntfs-3g nvtop opendoas
-    os-prober otf-font-awesome pacman-contrib pamixer pavucontrol
-    perl-image-exiftool pipewire pipewire-alsa pipewire-jack
+    inxi iptables-nft jdk-openjdk jq keyd kitty kvantum less
+    libpulse libspng libvirt linux linux-firmware loupe lsd ltrace
+    mercurial micro mpv mpv-mpris nano neovim network-manager-applet
+    networkmanager nodejs noto-fonts noto-fonts-emoji npm ntfs-3g
+    nvtop opendoas os-prober otf-font-awesome pacman-contrib pamixer
+    pavucontrol perl-image-exiftool pipewire pipewire-alsa pipewire-jack
     pipewire-pulse playerctl powertop python-pip python-pywal
     python-requests qalculate-gtk qemu-full qt5-quickcontrols2
-    qt6-5compat qt6-virtualkeyboard rofi ruby sddm sharutils
-    slurp sof-firmware sox spice-vdagent stow sudo swappy
+    qt6-5compat qt6-multimedia qt6-virtualkeyboard rofi ruby sddm
+    sharutils slurp sof-firmware sox spice-vdagent stow sudo swappy
     system-config-printer tcpdump thunar thunar-archive-plugin
     thunar-volman tk tlp tlp-rdw ttf-droid ttf-fira-code
     ttf-jetbrains-mono tumbler umockdev unrar unzip upower vim
     virt-manager virt-viewer vulkan-radeon wget wireplumber
     wlsunset wpa_supplicant xarchiver xdg-desktop-portal-gtk
-    xdg-user-dirs zram-generator zsh zsh-completions
-    multimon-ng inxi binwalk hashcat hexedit john wireshark-cli
+    xdg-desktop-portal-hyprland xdg-user-dirs zram-generator
+    zsh zsh-completions binwalk hashcat hexedit john wireshark-cli
 )
 
-sudo pacman -S --needed --noconfirm "${PACMAN_PKGS[@]}" 2>/dev/null
+for pkg in "${PACMAN_PKGS[@]}"; do
+    install_pacman_pkg "$pkg"
+done
+ok "Pacman packages done"
 
-# Install these separately to make sure they don't get skipped
-sudo pacman -S --needed --noconfirm sddm libvirt tlp qemu-full virt-manager virt-viewer hyprland kitty zsh qt6-multimedia pipewire wireplumber xdg-desktop-portal-hyprland
-ok "Pacman packages installed"
+# ── Install AUR packages ───────────────────────────────────────────────────────
+step "Installing AUR packages (this will take a while)..."
 
-# AUR packages
 AUR_PKGS=(
-    noctalia-shell
-    noctalia-qs
     grimblast-git
     python-pywalfox
     python-passlib
@@ -93,7 +111,6 @@ AUR_PKGS=(
     ttf-fantasque-nerd
     ttf-jetbrains-mono-nerd
     ttf-victor-mono
-    yay-bin
     rockyou
     ryujinx-bin
     tor-browser-bin
@@ -101,18 +118,20 @@ AUR_PKGS=(
     stegseek
     rocm-llvm
     rocm-opencl-runtime
-    radeontool
+    radeontop
     multimon-ng
 )
 
-info "Installing AUR packages..."
-yay -S --needed --noconfirm "${AUR_PKGS[@]}" 2>/dev/null
-ok "AUR packages installed"
+for pkg in "${AUR_PKGS[@]}"; do
+    install_aur_pkg "$pkg"
+done
+ok "AUR packages done"
 
-# Install noctalia explicitly to make sure it's installed
+# ── Install Noctalia explicitly ────────────────────────────────────────────────
 step "Installing Noctalia..."
-yay -S --needed --noconfirm noctalia-qs noctalia-shell
-ok "Noctalia installed"
+install_aur_pkg "noctalia-qs"
+install_aur_pkg "noctalia-shell"
+ok "Noctalia done"
 
 # ── Clone dotfiles ─────────────────────────────────────────────────────────────
 step "Cloning dotfiles from GitHub..."
@@ -170,18 +189,20 @@ done
 step "Restoring Ryujinx saves..."
 mkdir -p "$HOME/.config/Ryujinx"
 if [ -d "$REPO_DIR/ryujinx" ] && [ "$(ls -A $REPO_DIR/ryujinx 2>/dev/null)" ]; then
-    cp -r "$REPO_DIR/ryujinx/." "$HOME/.config/Ryujinx/"
-    ok "Ryujinx saves restored"
+    cp -r "$REPO_DIR/ryujinx/bis" "$HOME/.config/Ryujinx/"
+    cp -r "$REPO_DIR/ryujinx/profiles" "$HOME/.config/Ryujinx/" 2>/dev/null
+    cp "$REPO_DIR/ryujinx/Config.json" "$HOME/.config/Ryujinx/" 2>/dev/null
+    cp -r "$REPO_DIR/ryujinx/system" "$HOME/.config/Ryujinx/" 2>/dev/null
+    ok "Ryujinx saves restored — saves will appear automatically when you launch Ryujinx"
 fi
 
 # ── Enable services ────────────────────────────────────────────────────────────
 step "Enabling services..."
-sudo systemctl enable sddm
-sudo systemctl enable NetworkManager
-sudo systemctl enable bluetooth
-sudo systemctl enable libvirtd
-sudo systemctl enable tlp
-ok "Services enabled"
+sudo systemctl enable sddm && ok "sddm enabled" || err "sddm failed"
+sudo systemctl enable NetworkManager && ok "NetworkManager enabled" || err "NetworkManager failed"
+sudo systemctl enable bluetooth && ok "bluetooth enabled" || err "bluetooth failed"
+sudo systemctl enable libvirtd && ok "libvirtd enabled" || err "libvirtd failed"
+sudo systemctl enable tlp && ok "tlp enabled" || err "tlp failed"
 
 # ── Add user to groups ─────────────────────────────────────────────────────────
 step "Adding user to groups..."
@@ -190,7 +211,6 @@ ok "Groups updated"
 
 # ── Set zsh as default shell ───────────────────────────────────────────────────
 step "Setting zsh as default shell..."
-sudo pacman -S --needed --noconfirm zsh zsh-completions
 chsh -s /bin/zsh
 ok "zsh set as default shell"
 
@@ -198,7 +218,23 @@ ok "zsh set as default shell"
 git config --global user.email "genfire2009@gmail.com"
 git config --global user.name "genfire209"
 
-# ── Done ───────────────────────────────────────────────────────────────────────
+# ── Summary of failed packages ────────────────────────────────────────────────
+echo ""
+if [ ${#FAILED_PKGS[@]} -gt 0 ]; then
+    echo -e "${RED}╔══════════════════════════════════════════════════════╗${RESET}"
+    echo -e "${RED}║         The following packages failed to install:    ║${RESET}"
+    echo -e "${RED}╚══════════════════════════════════════════════════════╝${RESET}"
+    for pkg in "${FAILED_PKGS[@]}"; do
+        echo -e "  ${RED}✗${RESET} $pkg"
+    done
+    echo ""
+    echo -e "${YELLOW}Install them manually with:${RESET}"
+    echo -e "  pacman: sudo pacman -S <package>"
+    echo -e "  AUR:    yay -S <package>"
+else
+    echo -e "${GREEN}All packages installed successfully!${RESET}"
+fi
+
 echo ""
 echo -e "${GREEN}╔══════════════════════════════════════════════════════╗${RESET}"
 echo -e "${GREEN}║           Bootstrap complete! Reboot now.            ║${RESET}"
