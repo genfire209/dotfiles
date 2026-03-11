@@ -28,7 +28,6 @@ gnome-system-monitor
 go
 grim
 grimblast-git
-grub
 gst-plugin-pipewire
 gtk-engine-murrine
 gvfs
@@ -44,6 +43,7 @@ iptables-nft
 jdk-openjdk
 john
 jq
+kdeconnect
 keyd
 kitty
 kvantum
