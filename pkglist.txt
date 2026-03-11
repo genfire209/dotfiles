@@ -58,6 +58,7 @@ lsd
 ltrace
 mercurial
 micro
+mousepad
 mpv
 mpv-mpris
 multimon-ng

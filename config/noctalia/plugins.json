@@ -7,6 +7,9 @@
         }
     ],
     "states": {
+        "assistant-panel": {
+            "enabled": true
+        }
     },
     "version": 2
 }
