@@ -5,7 +5,6 @@
       "openai_compatible": "Chat-GPT"
     },
     "apiKeys": {
-      "openai_compatible": "",
       "google": "AIzaSyDa0wDJVCq9_MEhirdw8ZM_bWi_5T0-x-M"
     },
     "temperature": 0.7,
