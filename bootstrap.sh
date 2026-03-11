@@ -79,7 +79,7 @@ PACMAN_PKGS=(
 sudo pacman -S --needed --noconfirm "${PACMAN_PKGS[@]}" 2>/dev/null
 
 # Install these separately to make sure they don't get skipped
-sudo pacman -S --needed --noconfirm sddm libvirt tlp qemu-full virt-manager virt-viewer hyprland
+sudo pacman -S --needed --noconfirm sddm libvirt tlp qemu-full virt-manager virt-viewer hyprland kitty zsh qt6-multimedia pipewire wireplumber xdg-desktop-portal-hyprland
 ok "Pacman packages installed"
 
 # AUR packages
@@ -185,6 +185,7 @@ ok "Groups updated"
 
 # ── Set zsh as default shell ───────────────────────────────────────────────────
 step "Setting zsh as default shell..."
+sudo pacman -S --needed --noconfirm zsh zsh-completions
 chsh -s /bin/zsh
 ok "zsh set as default shell"
 
