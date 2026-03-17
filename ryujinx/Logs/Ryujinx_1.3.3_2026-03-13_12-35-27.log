@@ -1,0 +1,261 @@
+00:00:00.287 |I| Configuration LogValueChange: ResScale set to: 1
+00:00:00.303 |I| Configuration LogValueChange: ResScaleCustom set to: 1
+00:00:00.303 |I| Configuration LogValueChange: MaxAnisotropy set to: -1
+00:00:00.304 |I| Configuration LogValueChange: AspectRatio set to: Fixed16x9
+00:00:00.305 |I| Configuration LogValueChange: PreferredGpu set to: 0x1002_0x1114
+00:00:00.305 |I| Configuration LogValueChange: ScalingFilterLevel set to: 80
+00:00:00.306 |I| Configuration LogValueChange: CustomVSyncInterval set to: 120
+00:00:00.306 |I| Configuration LogValueChange: EnableShaderCache set to: True
+00:00:00.306 |I| Configuration LogValueChange: EnableMacroHLE set to: True
+00:00:00.306 |I| Configuration LogValueChange: Language set to: AmericanEnglish
+00:00:00.307 |I| Configuration LogValueChange: Region set to: USA
+00:00:00.307 |I| Configuration LogValueChange: TimeZone set to: UTC
+00:00:00.310 |I| Configuration LogValueChange: SystemTimeOffset set to: -37
+00:00:00.310 |I| Configuration LogValueChange: EnableDockedMode set to: True
+00:00:00.310 |I| Configuration LogValueChange: EnablePtc set to: True
+00:00:00.313 |I| Configuration LogValueChange: TickScalar set to: 50
+00:00:00.313 |I| Configuration LogValueChange: EnableFsIntegrityChecks set to: True
+00:00:00.314 |I| Configuration LogValueChange: AudioBackend set to: SDL2
+00:00:00.314 |I| Configuration LogValueChange: AudioVolume set to: 1
+00:00:00.315 |I| Configuration LogValueChange: MemoryManagerMode set to: HostMappedUnsafe
+00:00:00.316 |I| Configuration LogValueChange: UseHypervisor set to: True
+00:00:00.318 |I| Configuration LogValueChange: LdnPassphrase set to: 
+00:00:00.318 |I| Configuration LogValueChange: LdnServer set to: 
+00:00:00.319 |I| Configuration LogValueChange: GdbStubPort set to: 55555
+00:00:00.330 |W| Application GetActualScaleFactor: Couldn't determine monitor DPI: Wayland not yet supported
+00:00:00.331 |N| Application PrintSystemInfo:    ___                 __    _              
+00:00:00.331 |N| Application PrintSystemInfo:   / _ \  __ __ __ __  / /   (_)  ___   ___ _
+00:00:00.331 |N| Application PrintSystemInfo:  / , _/ / // // // / / _ \ / /  / _ \ / _ `/
+00:00:00.331 |N| Application PrintSystemInfo: /_/|_|  \_, / \_,_/ /_.__//_/  /_//_/ \_, / 
+00:00:00.331 |N| Application PrintSystemInfo:        /___/                         /___/  
+00:00:00.331 |N| Application PrintSystemInfo: Ryujinx Version: 1.3.3
+00:00:00.331 |N| Application PrintSystemInfo: .NET Runtime: .NET 9.0.9
+00:00:00.344 |N| Application PrintSystemInfo: Operating System: Arch Linux (X64)
+00:00:00.344 |N| Application PrintSystemInfo: CPU: AMD Ryzen AI 7 350 w/ Radeon 860M ; 16 logical
+00:00:00.348 |N| Application PrintSystemInfo: RAM: Total 14.9 GiB ; Available 12.3 GiB
+00:00:00.351 |N| Application PrintSystemInfo: Logs Enabled: Info, Warning, Error, Guest, Stub
+00:00:00.352 |N| Application PrintSystemInfo: Launch Mode: UserProfile
+00:00:00.661 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:00.709 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:00.712 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:04.526 |I| Application QueryLatestAsync: Checking for updates from: https://update.ryujinx.app/latest/query?os=linux&arch=amd64&rc=stable
+00:00:04.677 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:05.338 |I| Application BeginUpdateAsync: Up to date.
+00:00:00.086 |I| Gpu : Backend Threading (Auto): True
+00:00:00.296 |N| Application LoadGuestApplication: Using Firmware Version: 19.0.1
+00:00:00.296 |N| Application LoadGuestApplication: Loading content archive from '/home/[redacted]/Downloads/Games/Pokemon Brilliant Diamond [0100000011D90000][v0].nsp'.
+00:00:00.296 |I| Application LoadGuestApplication: Loading as NSP.
+00:00:00.322 |I| ModLoader QueryContentsDir: Searching mods for Application 0100000011D90000 in "/home/[redacted]/.config/Ryujinx/mods/contents"
+00:00:00.323 |I| ModLoader QueryContentsDir: Searching mods for Application 0100000011D90000 in "/home/[redacted]/.config/Ryujinx/sdcard/atmosphere/contents"
+00:00:00.325 |I| Loader Load: Loading rtld...
+00:00:00.339 |I| Loader PrintRoSectionInfo: rtld:
+    Module: nnrtld
+00:00:00.339 |I| Loader Load: Loading main...
+00:00:00.729 |I| Loader PrintRoSectionInfo: main:
+    Module: F:\JenkinsWorkSpace\workspace\BuildRom_Launch\unity_project\Dpr\SwitchIL2CPPCache\il2cpp_cache\linkresult_22F671898E59E8B9B3F93C78532B1E40\SwitchPlayer.nss
+    SDK Libraries: SDK MW+UnityTechnologies+Unity-2019_4_27_f1
+                   SDK MW+Nintendo+NintendoSDK_libcurl-11_4_3-Release
+                   SDK MW+Nintendo+NintendoSDK_libz-11_4_3-Release
+                   SDK MW+Nintendo+NEX-4_6_11-appdl
+                   SDK MW+Nintendo+PIA_UNITY-0.33.0
+                   SDK MW+Nintendo+PiaSession-5_37_0
+                   SDK MW+Nintendo+PiaTransport-5_37_0
+                   SDK MW+Nintendo+NEX_DS-4_6_11
+                   SDK MW+Nintendo+NEX_R2-4_6_11
+                   SDK MW+Nintendo+NEX_RK-4_6_11
+                   SDK MW+Nintendo+NEX_CO-4_6_11
+                   SDK MW+Nintendo+NEX_SS-4_6_11
+                   SDK MW+Nintendo+NEX_UT-4_6_11
+                   SDK MW+Nintendo+PiaCommon-5_37_0
+                   SDK MW+Nintendo+Pia-5_37_0_58082
+                   SDK MW+Nintendo+PiaFramework-5_37_0
+                   SDK MW+Nintendo+PiaLan-5_37_0
+                   SDK MW+Nintendo+PiaLocal-5_37_0
+                   SDK MW+Nintendo+PiaNex-5_37_0-forNEX-4_6_5
+                   SDK MW+Nintendo+PiaReckoning-5_37_0
+                   SDK MW+Nintendo+PiaSync-5_37_0
+                   SDK MW+Nintendo+NEX_MM-4_6_11
+                   SDK MW+Nintendo+PiaClone-5_37_0
+00:00:00.730 |I| Loader Load: Loading subsdk0...
+00:00:00.753 |I| Loader PrintRoSectionInfo: subsdk0:
+    Module: multimedia
+    SDK Libraries: SDK MW+Nintendo+NintendoSDK_movie-11_4_3-Release
+00:00:00.753 |I| Loader Load: Loading sdk...
+00:00:00.801 |I| Loader PrintRoSectionInfo: sdk:
+    Module: nnSdk
+    FS SDK Version: 11.4.3
+    SDK Libraries: SDK MW+Nintendo+NintendoSDK_libz-11_4_3-Release
+                   SDK MW+Nintendo+NintendoSdk_nnSdk-11_4_3-Release
+                   SDK MW+Nintendo+NintendoSDK_NVN-11_4_3-Release
+00:00:00.880 |I| Ptc Initialize: Initializing Profiled Persistent Translation Cache (enabled: True).
+00:00:00.880 |I| Ptc Initialize: PPTC (v7009) Profile: 1.0.0-default
+00:00:01.538 |I| Ptc Load: Loaded Translation Cache (size: 129747809 bytes, translated functions: 67441).
+00:00:01.552 |I| Ptc Load: Loaded Profiling Info (size: 305953 bytes, profiled functions: 67195).
+00:00:01.554 |I| Application ParseCapability: Application requested cores with index range 0 to 2
+00:00:01.555 |I| Loader LoadNsos: Loading image 0 at 0x0000000008500000...
+00:00:01.556 |I| Loader LoadNsos: Loading image 1 at 0x0000000008504000...
+00:00:01.582 |I| Loader LoadNsos: Loading image 2 at 0x000000000d2bd000...
+00:00:01.584 |I| Loader LoadNsos: Loading image 3 at 0x000000000d963000...
+00:00:01.587 |I| ModLoader LoadCheats: Build ids found for application 0100000011D90000:
+    6F8B1226CC8CD958021D6BFD226EBF23F892AB9B000000000000000000000000
+    F87FC6075104EC4D9642A4AA6BB2221600000000000000000000000000000000
+    507F19D1240D09D00992248E8A0FD77EBD784EB4000000000000000000000000
+    2D369D9999E3E10E665106F840FFFF9BDAA0BB8E000000000000000000000000
+00:00:01.590 |I| Application EnsureSaveData: Ensuring required savedata exists.
+00:00:01.607 |I| Loader Start: Application Loaded: Pokémon Brilliant Diamond v1.0.0 [0100000011d90000] [64-bit]
+00:00:01.654 |I| GUI.WindowThread Hid Configure: Configured Controller ProController to Player1
+00:00:01.662 |I| GUI.WindowThread Hid SetupNpad: Connected Controller ProController to Player1
+00:00:01.774 |N| GUI.RenderThread Gpu PrintGpuInformation: AMD Radeon 860M Graphics (RADV KRACKAN1) (Vulkan v1.4.335, Driver v26.0.1)
+00:00:01.774 |N| GUI.RenderThread Gpu PrintGpuInformation: GPU Memory: 5429 MiB
+00:00:01.779 |I| GPU.MainThread Gpu LoadShaders: Loading 3317 shaders from the cache...
+00:00:03.639 |I| GPU.MainThread Gpu LoadShaders: Shader cache loaded.
+00:00:04.158 |W| HLE.GuestThread.46 Cpu Allocate: JIT Cache Region 0 exhausted, creating new Cache Region 1 (512 MB Total Allocation).
+00:00:04.541 |I| HLE.GuestThread.46 Ptc LoadTranslations: 66759 translated functions loaded
+00:00:04.557 |I| HLE.GuestThread.46 Ptc MakeAndSaveTranslations: 0 of 436 functions translated | Thread count: 15
+00:00:05.484 |I| HLE.GuestThread.46 Ptc MakeAndSaveTranslations: 436 of 436 functions translated in 0.7907131 seconds | 0 functions blacklisted | Thread count: 15
+00:00:05.555 |S| HLE.OsThread.47 ServiceAm GetAppletResourceUserId: Stubbed. {appletResourceUserId: 1}
+00:00:05.561 |S| HLE.OsThread.47 ServiceAm AcquireForegroundRights: Stubbed. 
+00:00:05.561 |S| HLE.OsThread.47 ServiceAm SetFocusHandlingMode: Stubbed. {unknownFlag1: False ; unknownFlag2: False ; unknownFlag3: True}
+00:00:05.561 |S| HLE.OsThread.47 ServiceAm SetOutOfFocusSuspendingEnabled: Stubbed. {outOfFocusSuspendingEnabled: False}
+00:00:05.566 |S| HLE.OsThread.47 ServicePctl Initialize: Stubbed. 
+00:00:05.590 |S| HLE.OsThread.4 ServiceNv FinishInitialize: Stubbed. 
+00:00:05.595 |S| HLE.OsThread.47 ServiceAm SetRestartMessageEnabled: Stubbed. {restartMessageEnabled: True}
+00:00:05.595 |S| HLE.OsThread.47 ServiceAm SetPerformanceModeChangedNotification: Stubbed. {performanceModeChangedNotification: True}
+00:00:05.595 |S| HLE.OsThread.47 ServiceAm SetOperationModeChangedNotification: Stubbed. {operationModeChangedNotification: True}
+00:00:05.866 |S| HLE.OsThread.1 ServiceBsd RegisterClient: Stubbed. 
+00:00:05.866 |S| HLE.OsThread.1 ServiceBsd StartMonitoring: Stubbed. {unknown0: 0}
+00:00:06.025 |S| HLE.OsThread.47 ServiceSsl SetInterfaceVersion: Stubbed. {interfaceVersion: 3}
+00:00:06.034 |S| HLE.OsThread.3 ServiceHid ActivateTouchScreen: Stubbed. {appletResourceUserId: 1}
+00:00:06.035 |S| HLE.OsThread.3 ServiceHid ActiveNpadImpl: Stubbed. {appletResourceUserId: 1 ; revision: 3}
+00:00:06.036 |S| HLE.OsThread.3 ServiceHid SetSupportedNpadStyleSet: Stubbed. {pid: 127 ; appletResourceUserId: 1 ; type: ProController, Handheld, JoyconPair}
+00:00:06.038 |I| GUI.WindowThread Hid SetupNpad: Disconnected Controller ProController from Player1
+00:00:06.041 |W| GUI.WindowThread Hid Remap: No matching controllers found. Application requests 'ProController, Handheld, JoyconPair' on 'Player1, Player2, Player3, Player4, Player5, Player6, Player7, Player8, Handheld'
+00:00:06.042 |S| HLE.OsThread.3 ServiceHid SetSupportedNpadIdType: Stubbed. 9 Players: Handheld,Player1,Player2,Player3,Player4,Player5,Player6,Player7,Player8
+00:00:06.042 |I| GUI.WindowThread Hid SetupNpad: Connected Controller ProController to Player1
+00:00:06.061 |S| HLE.OsThread.4 ServiceNv InitializeEx: Stubbed. 
+00:00:06.071 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:00:06.102 |S| HLE.OsThread.4 ServiceNv SetNvMapFd: Stubbed. 
+00:00:06.102 |S| HLE.OsThread.4 ServiceNv AllocGpfifoEx2: Stubbed. 
+00:00:06.102 |S| HLE.OsThread.4 ServiceNv AllocObjCtx: Stubbed. 
+00:00:06.103 |S| HLE.OsThread.4 ServiceNv SetErrorNotifier: Stubbed. 
+00:00:06.103 |S| HLE.OsThread.4 ServiceNv SetUserData: Stubbed. 
+00:00:06.104 |S| HLE.OsThread.4 ServiceNv SetTimeout: Stubbed. 
+00:00:06.104 |S| HLE.OsThread.4 ServiceNv SetTimeslice: Stubbed. 
+00:00:06.104 |S| HLE.OsThread.4 ServiceNv ZcullBind: Stubbed. 
+00:00:06.110 |I| HLE.OsThread.47 SurfaceFlinger CreateLayerFromId: Creating layer 1
+00:00:06.112 |I| HLE.OsThread.47 SurfaceFlinger CreateLayerFromId: Creating layer 2
+00:00:06.160 |I| HLE.OsThread.11 AudioRenderer AcquireSessionId: Registered new output (0)
+00:00:06.176 |I| HLE.OsThread.11 Audio EnsureAudioStreamSetup: New audio stream setup with a target sample count of 1024
+00:00:06.334 |S| HLE.OsThread.3 ServiceHid SetSupportedNpadIdType: Stubbed. 2 Players: Player1,Handheld
+00:00:06.335 |S| HLE.OsThread.3 ServiceHid SetSupportedNpadStyleSet: Stubbed. {pid: 127 ; appletResourceUserId: 1 ; type: ProController, Handheld, JoyconPair}
+00:00:06.452 |I| Ptc.DiskWriter Ptc Save: Saved Translation Cache (size: 130965296 bytes, translated functions: 67877).
+00:00:09.030 |S| HLE.OsThread.47 ServiceAcc InitializeApplicationInfo: Stubbed. {TitleId: 72057594337361920}
+00:00:09.032 |S| HLE.OsThread.47 ServiceAcc IsUserAccountSwitchLocked: Stubbed. 
+00:00:13.521 |S| HLE.OsThread.47 ServiceAm SetFocusHandlingMode: Stubbed. {unknownFlag1: False ; unknownFlag2: False ; unknownFlag3: True}
+00:00:13.521 |S| HLE.OsThread.47 ServiceAm SetOutOfFocusSuspendingEnabled: Stubbed. {outOfFocusSuspendingEnabled: False}
+00:00:13.532 |I| HLE.OsThread.11 AudioRenderer AcquireSessionId: Registered new output (1)
+00:00:13.550 |I| HLE.OsThread.11 Audio EnsureAudioStreamSetup: New audio stream setup with a target sample count of 1024
+00:00:13.587 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:00:13.587 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:00:16.992 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:00:16.992 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:01:14.697 |S| HLE.OsThread.3 ServiceHid StartSixAxisSensor: Stubbed. {appletResourceUserId: 1 ; sixAxisSensorHandle: 131075}
+00:01:19.089 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:01:19.090 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:01:31.932 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:01:31.932 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:01:35.494 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306072 bytes, profiled functions: 67220).
+00:02:05.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306253 bytes, profiled functions: 67263).
+00:02:35.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306313 bytes, profiled functions: 67277).
+00:02:47.503 |S| HLE.OsThread.47 ServiceAm SetFocusHandlingMode: Stubbed. {unknownFlag1: False ; unknownFlag2: False ; unknownFlag3: True}
+00:02:47.503 |S| HLE.OsThread.47 ServiceAm SetOutOfFocusSuspendingEnabled: Stubbed. {outOfFocusSuspendingEnabled: False}
+00:02:50.019 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:02:50.161 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:03:04.366 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:03:04.366 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:03:05.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306340 bytes, profiled functions: 67283).
+00:03:35.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306363 bytes, profiled functions: 67288).
+00:04:05.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306380 bytes, profiled functions: 67292).
+00:05:10.376 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:05:10.552 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:06:02.962 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:06:03.151 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:06:05.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306391 bytes, profiled functions: 67294).
+00:06:37.030 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:06:37.181 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:07:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306406 bytes, profiled functions: 67297).
+00:07:35.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306419 bytes, profiled functions: 67300).
+00:08:35.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306423 bytes, profiled functions: 67300).
+00:08:36.291 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:08:36.495 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:09:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306434 bytes, profiled functions: 67302).
+00:09:34.278 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:09:34.298 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:09:34.298 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:09:34.494 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:09:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306443 bytes, profiled functions: 67304).
+00:10:05.496 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306580 bytes, profiled functions: 67334).
+00:10:54.587 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:10:54.587 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:11:05.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306603 bytes, profiled functions: 67338).
+00:12:19.883 |I| .NET TP Worker ServiceNifm LocalInterfaceCacheHandler: NetworkAddress changed, invalidating cached data.
+00:12:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306613 bytes, profiled functions: 67340).
+00:13:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306622 bytes, profiled functions: 67342).
+00:13:35.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306636 bytes, profiled functions: 67345).
+00:14:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306653 bytes, profiled functions: 67349).
+00:14:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306658 bytes, profiled functions: 67350).
+00:15:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306715 bytes, profiled functions: 67363).
+00:15:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306721 bytes, profiled functions: 67364).
+00:16:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306737 bytes, profiled functions: 67368).
+00:16:16.552 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:16:16.552 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:16:35.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306867 bytes, profiled functions: 67396).
+00:17:05.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306941 bytes, profiled functions: 67413).
+00:17:35.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306966 bytes, profiled functions: 67419).
+00:18:18.708 |I| .NET TP Worker ServiceNifm LocalInterfaceCacheHandler: NetworkAddress changed, invalidating cached data.
+00:18:27.597 |I| .NET TP Worker ServiceNifm LocalInterfaceCacheHandler: NetworkAddress changed, invalidating cached data.
+00:18:35.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306971 bytes, profiled functions: 67420).
+00:19:05.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306988 bytes, profiled functions: 67424).
+00:19:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 306997 bytes, profiled functions: 67426).
+00:20:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307002 bytes, profiled functions: 67427).
+00:21:05.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307007 bytes, profiled functions: 67428).
+00:22:05.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307028 bytes, profiled functions: 67431).
+00:22:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307043 bytes, profiled functions: 67435).
+00:23:05.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307076 bytes, profiled functions: 67443).
+00:23:35.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307088 bytes, profiled functions: 67446).
+00:24:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307098 bytes, profiled functions: 67448).
+00:25:05.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307104 bytes, profiled functions: 67449).
+00:25:12.443 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:25:12.638 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:25:35.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307102 bytes, profiled functions: 67449).
+00:26:05.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307111 bytes, profiled functions: 67451).
+00:26:07.158 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:26:07.182 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:26:07.182 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:26:07.345 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:26:27.602 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:26:27.816 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:26:41.814 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:26:41.814 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:27:05.490 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307115 bytes, profiled functions: 67452).
+00:27:08.782 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:27:08.782 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:27:09.429 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:27:09.638 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:27:13.648 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:27:13.806 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:27:32.747 |S| HLE.OsThread.4 ServiceNv ZbcSetTable: Stubbed. 
+00:27:32.747 |S| HLE.OsThread.4 ServiceNv GetActiveSlotMask: Stubbed. 
+00:27:35.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307320 bytes, profiled functions: 67499).
+00:28:05.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307412 bytes, profiled functions: 67519).
+00:30:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307422 bytes, profiled functions: 67521).
+00:30:50.227 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:30:50.420 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:31:05.491 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307431 bytes, profiled functions: 67521).
+00:31:15.196 |S| HLE.OsThread.47 ServiceAm LockExit: Stubbed. 
+00:31:15.381 |S| HLE.OsThread.47 ServiceAm UnlockExit: Stubbed. 
+00:31:35.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307480 bytes, profiled functions: 67533).
+00:33:35.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307485 bytes, profiled functions: 67534).
+00:34:05.492 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307513 bytes, profiled functions: 67539).
+00:34:35.493 |I| Ptc.DiskWriter Ptc Save: Saved Profiling Info (size: 307522 bytes, profiled functions: 67540).
+00:34:55.229 |I| .NET TP Worker ServiceNifm LocalInterfaceCacheHandler: NetworkAddress changed, invalidating cached data.
