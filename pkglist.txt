@@ -34,6 +34,7 @@ gvfs
 gvfs-mtp
 hashcat
 hexedit
+hypridle
 hyprland
 imagemagick
 intel-compute-runtime
@@ -113,6 +114,7 @@ spice-vdagent
 steghide
 stegseek
 stow
+stress
 sudo
 swappy
 system-config-printer

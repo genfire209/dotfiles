@@ -1,0 +1,115 @@
+00:00:00.165 |I| Configuration LogValueChange: ResScale set to: 1
+00:00:00.173 |I| Configuration LogValueChange: ResScaleCustom set to: 1
+00:00:00.173 |I| Configuration LogValueChange: MaxAnisotropy set to: -1
+00:00:00.174 |I| Configuration LogValueChange: AspectRatio set to: Fixed16x9
+00:00:00.174 |I| Configuration LogValueChange: PreferredGpu set to: 0x1002_0x1114
+00:00:00.175 |I| Configuration LogValueChange: ScalingFilterLevel set to: 80
+00:00:00.175 |I| Configuration LogValueChange: CustomVSyncInterval set to: 120
+00:00:00.175 |I| Configuration LogValueChange: EnableShaderCache set to: True
+00:00:00.175 |I| Configuration LogValueChange: EnableMacroHLE set to: True
+00:00:00.175 |I| Configuration LogValueChange: Language set to: AmericanEnglish
+00:00:00.176 |I| Configuration LogValueChange: Region set to: USA
+00:00:00.176 |I| Configuration LogValueChange: TimeZone set to: UTC
+00:00:00.178 |I| Configuration LogValueChange: SystemTimeOffset set to: -37
+00:00:00.178 |I| Configuration LogValueChange: EnableDockedMode set to: True
+00:00:00.178 |I| Configuration LogValueChange: EnablePtc set to: True
+00:00:00.179 |I| Configuration LogValueChange: TickScalar set to: 50
+00:00:00.179 |I| Configuration LogValueChange: EnableFsIntegrityChecks set to: True
+00:00:00.180 |I| Configuration LogValueChange: AudioBackend set to: SDL2
+00:00:00.180 |I| Configuration LogValueChange: AudioVolume set to: 1
+00:00:00.181 |I| Configuration LogValueChange: MemoryManagerMode set to: HostMappedUnsafe
+00:00:00.181 |I| Configuration LogValueChange: UseHypervisor set to: True
+00:00:00.182 |I| Configuration LogValueChange: LdnPassphrase set to: 
+00:00:00.182 |I| Configuration LogValueChange: LdnServer set to: 
+00:00:00.182 |I| Configuration LogValueChange: GdbStubPort set to: 55555
+00:00:00.189 |W| Application GetActualScaleFactor: Couldn't determine monitor DPI: Wayland not yet supported
+00:00:00.189 |N| Application PrintSystemInfo:    ___                 __    _              
+00:00:00.189 |N| Application PrintSystemInfo:   / _ \  __ __ __ __  / /   (_)  ___   ___ _
+00:00:00.189 |N| Application PrintSystemInfo:  / , _/ / // // // / / _ \ / /  / _ \ / _ `/
+00:00:00.189 |N| Application PrintSystemInfo: /_/|_|  \_, / \_,_/ /_.__//_/  /_//_/ \_, / 
+00:00:00.189 |N| Application PrintSystemInfo:        /___/                         /___/  
+00:00:00.189 |N| Application PrintSystemInfo: Ryujinx Version: 1.3.3
+00:00:00.189 |N| Application PrintSystemInfo: .NET Runtime: .NET 9.0.9
+00:00:00.196 |N| Application PrintSystemInfo: Operating System: Arch Linux (X64)
+00:00:00.197 |N| Application PrintSystemInfo: CPU: AMD Ryzen AI 7 350 w/ Radeon 860M ; 16 logical
+00:00:00.199 |N| Application PrintSystemInfo: RAM: Total 14.9 GiB ; Available 11.2 GiB
+00:00:00.201 |N| Application PrintSystemInfo: Logs Enabled: Info, Warning, Error, Guest, Stub
+00:00:00.201 |N| Application PrintSystemInfo: Launch Mode: UserProfile
+00:00:00.397 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:00.442 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:00.444 |E| .NET TP Worker ATTENTION: default value of option mesa_glthread overridden by environment.
+00:00:03.846 |I| Application QueryLatestAsync: Checking for updates from: https://update.ryujinx.app/latest/query?os=linux&arch=amd64&rc=stable
+00:00:04.461 |I| Application BeginUpdateAsync: Up to date.
+00:00:00.070 |I| Gpu : Backend Threading (Auto): True
+00:00:00.210 |N| Application LoadGuestApplication: Using Firmware Version: 19.0.1
+00:00:00.210 |N| Application LoadGuestApplication: Loading content archive from '/home/[redacted]/Downloads/Games/Pokemon Brilliant Diamond [0100000011D90000][v0].nsp'.
+00:00:00.210 |I| Application LoadGuestApplication: Loading as NSP.
+00:00:00.221 |I| ModLoader QueryContentsDir: Searching mods for Application 0100000011D90000 in "/home/[redacted]/.config/Ryujinx/mods/contents"
+00:00:00.221 |I| ModLoader QueryContentsDir: Searching mods for Application 0100000011D90000 in "/home/[redacted]/.config/Ryujinx/sdcard/atmosphere/contents"
+00:00:00.224 |I| Loader Load: Loading rtld...
+00:00:00.236 |I| Loader PrintRoSectionInfo: rtld:
+    Module: nnrtld
+00:00:00.236 |I| Loader Load: Loading main...
+00:00:00.553 |I| Loader PrintRoSectionInfo: main:
+    Module: F:\JenkinsWorkSpace\workspace\BuildRom_Launch\unity_project\Dpr\SwitchIL2CPPCache\il2cpp_cache\linkresult_22F671898E59E8B9B3F93C78532B1E40\SwitchPlayer.nss
+    SDK Libraries: SDK MW+UnityTechnologies+Unity-2019_4_27_f1
+                   SDK MW+Nintendo+NintendoSDK_libcurl-11_4_3-Release
+                   SDK MW+Nintendo+NintendoSDK_libz-11_4_3-Release
+                   SDK MW+Nintendo+NEX-4_6_11-appdl
+                   SDK MW+Nintendo+PIA_UNITY-0.33.0
+                   SDK MW+Nintendo+PiaSession-5_37_0
+                   SDK MW+Nintendo+PiaTransport-5_37_0
+                   SDK MW+Nintendo+NEX_DS-4_6_11
+                   SDK MW+Nintendo+NEX_R2-4_6_11
+                   SDK MW+Nintendo+NEX_RK-4_6_11
+                   SDK MW+Nintendo+NEX_CO-4_6_11
+                   SDK MW+Nintendo+NEX_SS-4_6_11
+                   SDK MW+Nintendo+NEX_UT-4_6_11
+                   SDK MW+Nintendo+PiaCommon-5_37_0
+                   SDK MW+Nintendo+Pia-5_37_0_58082
+                   SDK MW+Nintendo+PiaFramework-5_37_0
+                   SDK MW+Nintendo+PiaLan-5_37_0
+                   SDK MW+Nintendo+PiaLocal-5_37_0
+                   SDK MW+Nintendo+PiaNex-5_37_0-forNEX-4_6_5
+                   SDK MW+Nintendo+PiaReckoning-5_37_0
+                   SDK MW+Nintendo+PiaSync-5_37_0
+                   SDK MW+Nintendo+NEX_MM-4_6_11
+                   SDK MW+Nintendo+PiaClone-5_37_0
+00:00:00.553 |I| Loader Load: Loading subsdk0...
+00:00:00.575 |I| Loader PrintRoSectionInfo: subsdk0:
+    Module: multimedia
+    SDK Libraries: SDK MW+Nintendo+NintendoSDK_movie-11_4_3-Release
+00:00:00.575 |I| Loader Load: Loading sdk...
+00:00:00.619 |I| Loader PrintRoSectionInfo: sdk:
+    Module: nnSdk
+    FS SDK Version: 11.4.3
+    SDK Libraries: SDK MW+Nintendo+NintendoSDK_libz-11_4_3-Release
+                   SDK MW+Nintendo+NintendoSdk_nnSdk-11_4_3-Release
+                   SDK MW+Nintendo+NintendoSDK_NVN-11_4_3-Release
+00:00:00.712 |I| Ptc Initialize: Initializing Profiled Persistent Translation Cache (enabled: True).
+00:00:00.712 |I| Ptc Initialize: PPTC (v7009) Profile: 1.0.0-default
+00:00:01.369 |I| Ptc Load: Loaded Translation Cache (size: 137368584 bytes, translated functions: 70884).
+00:00:01.383 |I| Ptc Load: Loaded Profiling Info (size: 316523 bytes, profiled functions: 69376).
+00:00:01.385 |I| Application ParseCapability: Application requested cores with index range 0 to 2
+00:00:01.386 |I| Loader LoadNsos: Loading image 0 at 0x0000000008500000...
+00:00:01.386 |I| Loader LoadNsos: Loading image 1 at 0x0000000008504000...
+00:00:01.402 |I| Loader LoadNsos: Loading image 2 at 0x000000000d2bd000...
+00:00:01.404 |I| Loader LoadNsos: Loading image 3 at 0x000000000d963000...
+00:00:01.407 |I| ModLoader LoadCheats: Build ids found for application 0100000011D90000:
+    6F8B1226CC8CD958021D6BFD226EBF23F892AB9B000000000000000000000000
+    F87FC6075104EC4D9642A4AA6BB2221600000000000000000000000000000000
+    507F19D1240D09D00992248E8A0FD77EBD784EB4000000000000000000000000
+    2D369D9999E3E10E665106F840FFFF9BDAA0BB8E000000000000000000000000
+00:00:01.409 |I| Application EnsureSaveData: Ensuring required savedata exists.
+00:00:01.426 |I| Loader Start: Application Loaded: Pokémon Brilliant Diamond v1.0.0 [0100000011d90000] [64-bit]
+00:00:01.442 |I| GUI.WindowThread Hid Configure: Configured Controller ProController to Player1
+00:00:01.450 |I| GUI.WindowThread Hid SetupNpad: Connected Controller ProController to Player1
+00:00:01.536 |N| GUI.RenderThread Gpu PrintGpuInformation: AMD Radeon 860M Graphics (RADV KRACKAN1) (Vulkan v1.4.335, Driver v26.0.1)
+00:00:01.536 |N| GUI.RenderThread Gpu PrintGpuInformation: GPU Memory: 5429 MiB
+00:00:01.544 |I| GPU.MainThread Gpu LoadShaders: Loading 3413 shaders from the cache...
+00:00:03.568 |I| GPU.MainThread Gpu LoadShaders: Shader cache loaded.
+00:00:04.224 |W| HLE.GuestThread.46 Cpu Allocate: JIT Cache Region 0 exhausted, creating new Cache Region 1 (512 MB Total Allocation).
+00:00:04.791 |I| HLE.GuestThread.46 Ptc LoadTranslations: 69227 translated functions loaded
+00:00:04.808 |I| HLE.GuestThread.46 Ptc MakeAndSaveTranslations: 0 of 149 functions translated | Thread count: 15
+00:00:05.385 |I| HLE.GuestThread.46 Ptc MakeAndSaveTranslations: 149 of 149 functions translated in 0.4470641 seconds | 0 functions blacklisted | Thread count: 15
+00:00:05.418 |N| GUI.RenderThread Application ReloadConfig: Loading configuration from: /home/[redacted]/.config/Ryujinx/Config.json
